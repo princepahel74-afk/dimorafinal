@@ -266,6 +266,15 @@ h1,h2,h3,h4{letter-spacing:-.02em}.side h2,.modal-card h2,.d-head h2,.up-side h3
 .sec-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#22d3ee;padding:6px 12px;border-radius:var(--radius-full);border:1px solid rgba(6,182,212,.3);background:rgba(6,182,212,.06);box-shadow:0 0 18px var(--glow-cyan)}
 .sec-h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.1;letter-spacing:-.02em;color:var(--text-primary);margin:18px 0 14px}.sec-h2.xl{font-size:clamp(2.4rem,5vw,3.6rem)}
 .sec-sub{color:var(--text-secondary);margin:0 auto;max-width:600px}.sec-sub.left{margin:0 0 28px}
+/* what is dimora */
+.about-vs{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:stretch;max-width:1080px;margin:0 auto}
+.about-card{position:relative;padding:32px;border-radius:var(--radius-lg);background:var(--bg-glass);border:1px solid var(--border);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.about-card.new{border-color:var(--border-glow);background:linear-gradient(135deg,rgba(124,58,237,.1),rgba(6,182,212,.04) 70%),var(--bg-glass);box-shadow:0 0 40px var(--glow-soft),0 20px 50px rgba(0,0,0,.35)}
+.about-label{display:block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:20px}.about-card.new .about-label{color:#c4b5fd}
+.about-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}.about-list li{display:flex;gap:12px;align-items:flex-start;font-size:.95rem;line-height:1.5}.about-list svg{flex-shrink:0;margin-top:4px}
+.about-card.old li{color:var(--text-secondary)}.about-card.old svg{color:#f472b6}.about-card.new li{color:var(--text-primary)}.about-card.new svg{color:#34d399}
+.about-or{align-self:center;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary);background:var(--bg-base);border:1px solid var(--border-hover)}
+.about-note{max-width:680px;margin:40px auto 0;text-align:center;color:var(--text-secondary)}.about-note b{color:var(--text-primary)}
 /* bento */
 .bento-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:minmax(260px,auto);gap:20px}
 .bento{position:relative;overflow:hidden;padding:32px;border-radius:var(--radius-lg);background:var(--bg-glass);border:1px solid var(--border);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:border-color .3s var(--ease-out-expo),box-shadow .3s var(--ease-out-expo),transform .3s var(--ease-out-expo);display:flex;flex-direction:column}
@@ -330,7 +339,7 @@ h1,h2,h3,h4{letter-spacing:-.02em}.side h2,.modal-card h2,.d-head h2,.up-side h3
 @media (max-width:1023px){.nav-links,.nav-cta{display:none}.burger{display:block}.bento-grid{grid-template-columns:repeat(2,1fr)}.bento.tall{grid-row:span 1}.hero-visual,.hero-visual:hover{transform:none}
   .code-grid{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr}.stats-in{grid-template-columns:repeat(2,1fr);row-gap:24px}.stat:nth-child(3){border-left:0}}
 @media (max-width:767px){.wrap,.nav-in{padding:0 20px}.sec,.code-sec,.final-cta{padding:72px 0}.bento-grid{grid-template-columns:1fr}.bento:first-child,.bento.wide2{grid-column:span 1}
-  .steps3{grid-template-columns:1fr}.steps-line{display:none}.hero-visual{margin-top:48px}.hv-stage{aspect-ratio:4/3.4}.hv-live,.hv-dots{display:none}.showcase{width:100%}.sc-canvas{aspect-ratio:4/4.6}.sc-aria .aria-avatar{display:none}.foot-grid{grid-template-columns:1fr}.stat b{font-size:2rem}.ds-btn.lg{width:100%}.tlink{display:block;margin:14px 0 0}.ba{aspect-ratio:var(--ba-ar,1.15)}}
+  .steps3{grid-template-columns:1fr}.steps-line{display:none}.hero-visual{margin-top:48px}.hv-stage{aspect-ratio:4/3.4}.hv-live,.hv-dots{display:none}.showcase{width:100%}.sc-canvas{aspect-ratio:4/4.6}.sc-aria .aria-avatar{display:none}.foot-grid{grid-template-columns:1fr}.stat b{font-size:2rem}.about-vs{grid-template-columns:1fr}.about-or{justify-self:center}.about-card{padding:24px}.ds-btn.lg{width:100%}.tlink{display:block;margin:14px 0 0}.ba{aspect-ratio:var(--ba-ar,1.15)}}
 #app[data-view="2d"] .labels{display:none}
 /* multi-floor */
 .drop-in p.drop-sub{font-size:12.5px;margin:-8px 0 14px;opacity:.85}
