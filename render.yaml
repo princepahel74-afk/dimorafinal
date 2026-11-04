@@ -1,0 +1,30 @@
+# Render Blueprint — New → Blueprint → pick this repo. Creates one web service that serves
+# both the website (frontend/) and the API (backend/).
+services:
+  - type: web
+    name: dimora
+    runtime: python
+    plan: free                      # free sleeps after 15 min idle; "starter" ($7/mo) stays awake
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn --chdir backend -w 1 --threads 4 -t 180 -b 0.0.0.0:$PORT app:app
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DIMORA_PUBLIC          # rate-limits the server's AI key, blocks visitor-supplied URLs
+        value: "1"
+      - key: DIMORA_AI_PROVIDER
+        value: openrouter
+      - key: OPENROUTER_MODEL
+        value: qwen/qwen3.5-27b
+      - key: OPENROUTER_API_KEY     # Render asks you for this when you create the Blueprint
+        sync: false
+      - key: DIMORA_AI_PER_HOUR     # Qwen calls per visitor per hour on your key
+        value: "20"
+      - key: DIMORA_AI_PER_DAY      # Qwen calls for the whole site per day on your key
+        value: "500"
+      - key: DIMORA_MAX_UPLOAD_MB
+        value: "15"
+      - key: DATABASE_URL           # accounts + saved homes: paste a free Neon / Supabase Postgres URL
+        sync: false                 # (without it, accounts live in SQLite, which Render's free plan wipes on restart)

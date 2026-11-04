@@ -1,0 +1,20 @@
+{
+  "name": "DIMORA — AI Floor Plan to 3D Home Designer",
+  "short_name": "DIMORA",
+  "description": "Turn any floor plan into a furnished, priced 3D home you can walk through, with Aria, your AI design assistant.",
+  "start_url": "./?source=app",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b0f19",
+  "theme_color": "#0b0f19",
+  "categories": ["lifestyle", "productivity", "design"],
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "New home from a floor plan", "short_name": "New home", "url": "./?go=upload", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
